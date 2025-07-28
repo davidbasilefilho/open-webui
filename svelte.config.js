@@ -46,6 +46,11 @@ const config = {
 		// 	toggleButtonPos: 'bottom-right' // Position of the toggle button
 		// }
 	},
+	build: {
+	    rollupOptions: {
+      		external: ['y-protocols/awareness'],
+    	    },
+  	},
 	onwarn: (warning, handler) => {
 		const { code } = warning;
 		if (code === 'css-unused-selector') return;
